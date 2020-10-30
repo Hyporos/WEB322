@@ -7,3 +7,5 @@ $('#myModal2').on('shown.bs.modal', function () {
 })
 
 $('.datepicker').datepicker();
+
+
