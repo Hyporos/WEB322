@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" media="screen" charset="utf-8">
+    <link type="text/css" href="/public/css/custom.css">
+    <link rel="shortcut icon" href="#">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>WEB322</title>
+</head>
+
+<body style="background-color: #ffebed">
+    <div class="container-fullwidth">
+        <!-- Navbar -->
+        <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark " style="background-color: #dc3545;">
+            <a class="navbar-brand" href="/">Airbnb</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myModal2" data-toggle="modal" data-target="#myModal2">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/roomList">Room Listings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container-fluid text-center" style="background-color: #dc3545">
+            <span class="text-center">WEB222 Assignment</span>
+            <span class="text-center text2"><a href="#">About</a></span>
+            <span class="text-center text2"><a href="#">Contact Us</a></span>
+            <span class="text-center text2"><a href="#">Instagram</a></span>
+        </div>
+    </footer>
+
+
+    <div class="container-fluid listings">
+        <div class="row lists">
+            <div class="col">
+                <img src="https://gritdaily.com/wp-content/uploads/2019/11/Lyric-New-Orleans-3-Bed-3-Bath-Apartment.jpg"
+                    width="430" height="255">
+                <h4>ENTIRE HOUSE</h4>
+                <h5>Cozy 2 Bedroom House</h5>
+                <p>$100 CAD/night</p>
+            </div>
+            <div class="col">
+                <img src="https://www.fodors.com/wp-content/uploads/2019/08/airbnb-hero-.jpg" width="430" height="255">
+                <h4>ENTIRE HOUSE</h4>
+                <h5>Deluxe 4 Bedroom House</h5>
+                <p>$100 CAD/night</p>
+            </div>
+
+            <div class="col">
+                <img src="https://specials-images.forbesimg.com/imageserve/5e05ae84e961e1000739fd8f/960x0.jpg?fit=scale"
+                    width="430" height="255">
+                <h4>ENTIRE HOUSE</h4>
+                <h5>2 Bedroom House By Resort</h5>
+                <p>$180 CAD/night</p>
+            </div>
+
+            <div class="w-100"></div>
+            <div class="col">
+                <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2019/06/PJM020719Q202_Luxe_WanakaNZ_LivingRoom_0264-LightOn_R1.jpg"
+                    width="430" height="255">
+                <h4>ENTIRE HOUSE</h4>
+                <h5>Luxurious 3 Bedroom Getaway</h5>
+                <p>$250 CAD/night</p>
+            </div>
+
+            <div class="col">
+                <img src="https://i.insider.com/5ef604433ad8617a6e33b6b8?width=1100&format=jpeg&auto=webp" width="430"
+                    height="255">
+
+                <h4>ENTIRE APARTMENT</h4>
+                <h5>Sleek 1 Bedroom Stay</h5>
+                <p>$80 CAD/night</p>
+            </div>
+
+            <div class="col">
+                <img src="https://wellkeptwallet.com/wp-content/uploads/Apartment-for-Air-BNB-rental.jpg" width="430"
+                    height="255">
+                <h4>ENTIRE APARTMENT</h4>
+                <h5>2 Bedroom Apartment</h5>
+                <p>$75 CAD/night</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group mb-0">
+                            <label for="formGroupFirstName"></label>
+                            <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupLastName"></label>
+                            <input type="text" class="form-control" id="formGroupLastName" placeholder="Last name">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupEmail"></label>
+                            <input type="email" class="form-control" id="formGroupEmail" placeholder="Email address">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupPassword"></label>
+                            <input type="password" class="form-control" id="formGroupPassword" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Welcome Back</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group mb-0">
+                            <div class="form-group mb-0">
+                                <label for="formGroupEmail"></label>
+                                <input type="email" class="form-control" id="formGroupEmail"
+                                    placeholder="Email address">
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="formGroupPassword"></label>
+                                <input type="password" class="form-control" id="formGroupPassword"
+                                    placeholder="Password">
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- End -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="/public/js/custom.js"></script>
+</body>
+
+</html>

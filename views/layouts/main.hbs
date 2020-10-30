@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" media="screen" charset="utf-8">
+    <link type="text/css" href="/public/css/custom.css">
+    <link rel="shortcut icon" href="#">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>WEB322</title>
+</head>
+
+<body style="background-color: #ffebed">
+    <div class="container-fullwidth">
+        <!-- Navbar -->
+        <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark " style="background-color: #dc3545;">
+            <a class="navbar-brand" href="/">Airbnb</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myModal2" data-toggle="modal" data-target="#myModal2">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/roomList">Room Listings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container-fluid text-center" style="background-color: #dc3545">
+            <span class="text-center">WEB222 Assignment</span>
+            <span class="text-center text2"><a href="#">About</a></span>
+            <span class="text-center text2"><a href="#">Contact Us</a></span>
+            <span class="text-center text2"><a href="#">Instagram</a></span>
+        </div>
+    </footer>
+
+    <!-- Banner Promotion -->
+    <div class="row bannerspace">
+        <div class="container banner" style="background-color: #ecbbc0">
+            <h1>Proudly celebrating 20 years</h1>
+            <h1>Find your ideal vacation rental today</h1>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="container-fluid formCont" style="max-width:500px">
+            <form method="post">
+                <div class="form-group formContC mb-0 card p-1 ">
+                    <div class="form-header">
+                        <h5 class="form-title" id="formLabel">Book a place to stay</h5>
+                    </div>
+
+                    <select class="form-control dropMenu" id="sel1">
+                        <option selected>CITY</option>
+                        <option>Toronto</option>
+                        <option>Hamilton</option>
+                        <option>Scarborough</option>
+                        <option>Waterloo</option>
+                    </select>
+                    <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-In"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-In" placeholder="Check-In">
+                    </div>
+                    <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-Out"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Check-Out">
+                    </div>
+                    <select class="form-control dropMenu" id="sel1">
+                        <option selected>GUESTS</option>
+                        <option>1 guest</option>
+                        <option>2 guests</option>
+                        <option>3 guests</option>
+                        <option>4 guests</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Confirm identity</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mid Separator -->
+    <div class="container-fluid" style="background-color: #dc3545 ">
+        <hr>
+    </div>
+
+    <!-- Info -->
+    <div class="container-fluid banner2" style="background-color: #ffebed">
+        <div class="row">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XDdIenqWknI" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="infoText">
+                <h1>What is Airbnb?</h1>
+                <p>Airbnb is an online marketplace where you can rent other people's properties or<br>put your own
+                    property up for rent. Easy and simple to use, our website is trusted<br> by millions all around the
+                    world. Start by registering now! </p>
+            </div>
+
+            <img src="https://media.cntraveler.com/photos/5db1d0dd11c1e500092e7133/16:9/w_1200%2Cc_limit/airbnb-ski-aspen-28328347.jpg"
+                alt="airbnb" width="560" height="315">
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group mb-0">
+                            <label for="formGroupFirstName"></label>
+                            <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupLastName"></label>
+                            <input type="text" class="form-control" id="formGroupLastName" placeholder="Last name">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupEmail"></label>
+                            <input type="email" class="form-control" id="formGroupEmail" placeholder="Email address">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label for="formGroupPassword"></label>
+                            <input type="password" class="form-control" id="formGroupPassword" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Welcome Back</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group mb-0">
+                            <div class="form-group mb-0">
+                                <label for="formGroupEmail"></label>
+                                <input type="email" class="form-control" id="formGroupEmail"
+                                    placeholder="Email address">
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="formGroupPassword"></label>
+                                <input type="password" class="form-control" id="formGroupPassword"
+                                    placeholder="Password">
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- End -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="/public/js/custom.js"></script>
+</body>
+
+</html>
