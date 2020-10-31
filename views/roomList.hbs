@@ -53,7 +53,7 @@
 
     <div class="container-fluid listings">
         <div class="row lists">
-            <div class="col">
+            <div class="col listimg">
                 <img src="https://gritdaily.com/wp-content/uploads/2019/11/Lyric-New-Orleans-3-Bed-3-Bath-Apartment.jpg"
                     width="430" height="255">
                 <h4>ENTIRE HOUSE</h4>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="w-100"></div>
-            <div class="col">
+            <div class="col listimg">
                 <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2019/06/PJM020719Q202_Luxe_WanakaNZ_LivingRoom_0264-LightOn_R1.jpg"
                     width="430" height="255">
                 <h4>ENTIRE HOUSE</h4>
@@ -128,7 +128,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="regForm" method="post" onsubmit="return validateSignupForm()">
+                    <form name="regForm" method="get" action="/dashboard" onsubmit="return validateSignupForm()">
                         <div class="form-group mb-0">
                             <label for="formGroupFirstName"></label>
                             <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name"
@@ -231,6 +231,16 @@
                     return false;
                 }
 
+                if (signupPassword.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)) {
+                    alert('nice');
+                    return true;
+                }
+                else {
+                    alert('Password must be between 6 and 20 characters and contain at least one number and uppercase letter');
+                    return false;
+                }
+
+                
 
             }
 

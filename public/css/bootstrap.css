@@ -601,14 +601,25 @@ pre code {
 }
 
 .listings {
-  margin-left: 100px;
   margin-top: 100px;
-  display:flex;
-  justify-content: center;
+ 
 }
 
 .lists {
-  margin-left: 100px;
+
+}
+
+.listimg {
+  
+}
+
+.dashbanner {
+  margin-top: 350px;
+}
+
+.dashinfoText {
+  text-align: center;
+  margin-top: auto;
 }
 
 .listings img {
@@ -619,11 +630,136 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-width: 1610px) {
-  .banner p {
-    /*margin-left: 50px;*/
+@media only screen and (max-width: 1626px) {
+  .banner h1 {
+    margin-left: 0px;
+    text-align: center;
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .banner h1 {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .banner h1 {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner h1{
+    margin-left: 0px;
+    font-size: 23pt;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 523px) {
+  .banner .second {
+    margin-left: 0px;
+    font-size: 20pt;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 523px) {
+  .text-center {
+    margin-left: 10px;
+    font-size: 12pt;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1873px) {
+    .infoText {
+      margin-left: auto;
+      font-size:16px;
+      text-align: center;
+    }
+    .infoimg {
+      width: 400px;
+      height: 315px;
+    }
+    .infovid {
+      width: 400px;
+      height: 315px;
+    }
+}
+
+@media only screen and (max-width: 1551px) {
+  .infoText {
+    margin-left: auto;
+    font-size:15px;
+    text-align: center;
+  }
+  .infoimg {
+    width: 350px;
+    height: 300px;
+  }
+  .infovid {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1416px) {
+  .infoText {
+    margin-left: auto;
+    font-size:13px;
+    text-align: center;
+  }
+  .infoimg {
+    width: 300px;
+    height: 250px;
+  }
+  .infovid {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 1245px) {
+  .infoText {
+    margin-left: auto;
+    font-size:13px;
+    text-align: center;
+    max-width: 200px;
+  }
+  .infoimg {
+    width: 300px;
+    height: 250px;
+  }
+  .infovid {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .infoText {
+    margin-left: auto;
+    font-size:15px;
+    text-align: center;
+  }
+  .infoimg {
+    width: 400px;
+    height: 315px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .infovid {
+    width: 400px;
+    height: 315px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 /*formy*/
 .container,

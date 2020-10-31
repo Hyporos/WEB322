@@ -31,5 +31,9 @@ app.get("/roomList", function (req, res) {
     res.render('roomList', {layout: false})
 });
 
+app.get("/dashboard", function (req, res) {
+    res.render('dashboard', {layout: false})
+});
+
 // setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, onHttpStart);
