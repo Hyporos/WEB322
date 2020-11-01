@@ -1,0 +1,25 @@
+{
+  "name": "web322-01",
+  "version": "1.0.0",
+  "description": "airbnb",
+  "main": "WEB322-01.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express-handlebars": "^5.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyporos/WEB322.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyporos/WEB322/issues"
+  },
+  "homepage": "https://github.com/Hyporos/WEB322#readme"
+}
