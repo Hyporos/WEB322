@@ -1,4 +1,9 @@
+
+
 {
+  "scripts": {
+    "start": "node app.js"
+  },
   "name": "web322-01",
   "version": "1.0.0",
   "description": "airbnb",
