@@ -128,7 +128,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="regForm" method="get" action="/dashboard" onsubmit="return validateSignupForm()">
+                    <form name="regForm" method="get" action="dashboard" onsubmit="return validateSignupForm()">
                         <div class="form-group mb-0">
                             <label for="formGroupFirstName"></label>
                             <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name"
@@ -232,7 +232,6 @@
                 }
 
                 if (signupPassword.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)) {
-                    alert('nice');
                     return true;
                 }
                 else {

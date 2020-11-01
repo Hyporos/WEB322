@@ -127,7 +127,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="regForm" method="post" action="/action_page.php" onsubmit="return validateSignupForm()">
+                    <form name="regForm" method="get" action="dashboard" onsubmit="return validateSignupForm()">
                         <div class="form-group mb-0">
                             <label for="formGroupFirstName"></label>
                             <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name"
@@ -169,7 +169,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="loginForm" method="post" action="/action_page.php" onsubmit="return validateLoginForm()">
+                    <form name="loginForm" method="post" onsubmit="return validateLoginForm()">
                         <div class="form-group mb-0">
                             <div class="form-group mb-0">
                                 <label for="formGroupEmail"></label>
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="Login" class="btn btn-danger">
+                            <input type="submit" value="Submit" class="btn btn-danger">
                         </div>
                     </form>
                 </div>
@@ -192,7 +192,7 @@
 
         <!-- Check for null -->
 
-<script>
+        <script>
 
             function validateLoginForm() {
 
@@ -217,8 +217,6 @@
 
 
             }
-            </script>
-            <script>
 
             function validateSignupForm() {
 
@@ -231,6 +229,16 @@
                     alert("Registration info must be filled out");
                     return false;
                 }
+
+                if (signupPassword.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)) {
+                    return true;
+                }
+                else {
+                    alert('Password must be between 6 and 20 characters and contain at least one number and uppercase letter');
+                    return false;
+                }
+
+                
 
             }
 
