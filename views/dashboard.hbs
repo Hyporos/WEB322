@@ -76,16 +76,6 @@
                 <div class="modal-body">
                     <form name="regForm" method="get" action="dashboard" onsubmit="return validateSignupForm()">
                         <div class="form-group mb-0">
-                            <label for="formGroupFirstName"></label>
-                            <input type="text" class="form-control" id="formGroupFirstName" placeholder="First name"
-                                name="signupFirstName">
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="formGroupLastName"></label>
-                            <input type="text" class="form-control" id="formGroupLastName" placeholder="Last name"
-                                name="signupLastName">
-                        </div>
-                        <div class="form-group mb-0">
                             <label for="formGroupEmail"></label>
                             <input type="email" class="form-control" id="formGroupEmail" placeholder="Email address"
                                 name="signupEmail">
@@ -167,15 +157,8 @@
 
             function validateSignupForm() {
 
-                var signupFirstName = document.forms["regForm"]["signupFirstName"].value;
-                var signupLastName = document.forms["regForm"]["signupLastName"].value;
                 var signupEmail = document.forms["regForm"]["signupEmail"].value;
                 var signupPassword = document.forms["regForm"]["signupPassword"].value;
-
-                if (signupFirstName == "" || signupLastName == "" || signupEmail == "" || signupPassword == "") {
-                    alert("Registration info must be filled out");
-                    return false;
-                }
 
                 if (signupPassword.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)) {
                     return true;

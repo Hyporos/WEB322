@@ -1,6 +1,21 @@
+const config = require('config');
+var Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
+const mongoose = require('mongoose');
+const users = require('./routes/users');
+const auth = require('./routes/auth');
 var express = require("express");
 var hbs = require('express-handlebars');
 var app = express();
+
+if (!config.get('PrivateKey')) {
+    console.error('Error: PrivateKey is not defined.');
+    process.exit(1);
+}
+
+mongoose.connect('mongodb://localhost/airbnb')
+    .then(() => console.log('Now connected to MongoDB!'))
+    .catch(err => console.error('Something went wrong', err));
 
 app.set('view engine', 'hbs');
 
@@ -13,6 +28,9 @@ app.engine('hbs', hbs({
 
 
 app.use('/static', express.static('public'));
+app.use(express.json());
+app.use('/api/users', users);
+app.use('/api/auth', auth);
 
 var HTTP_PORT = process.env.PORT || 8080;
 
