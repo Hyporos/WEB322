@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="#">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <title>WEB322</title>
 </head>
 
@@ -48,70 +51,55 @@
         </div>
     </footer>
 
-    <!-- Banner Promotion -->
-    <div class="row bannerspace">
-        <div class="container banner" style="background-color: #ecbbc0">
-            <h1>Proudly celebrating 20 years</h1>
-            <h1 class="second">Find your ideal vacation rental today</h1>
-        </div>
-
-        <!-- Booking Form -->
-        <div class="container-fluid formCont" style="max-width:500px">
-            <form method="post">
-                <div class="form-group formContC mb-0 card p-1 ">
-                    <div class="form-header">
-                        <h5 class="form-title" id="formLabel">Book a place to stay</h5>
-                    </div>
-
-                    <select class="form-control dropMenu" id="sel1">
-                        <option selected>CITY</option>
-                        <option>Toronto</option>
-                        <option>Hamilton</option>
-                        <option>Scarborough</option>
-                        <option>Waterloo</option>
-                    </select>
-                    <div class="form-group mb-0 ">
-                        <label for="formGroupCheck-In"></label>
-                        <input type="text" class="form-control" id="formGroupCheck-In" placeholder="Check-In">
-                    </div>
-                    <div class="form-group mb-0 ">
-                        <label for="formGroupCheck-Out"></label>
-                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Check-Out">
-                    </div>
-                    <select class="form-control dropMenu" id="sel1">
-                        <option selected>GUESTS</option>
-                        <option>1 guest</option>
-                        <option>2 guests</option>
-                        <option>3 guests</option>
-                        <option>4 guests</option>
-                    </select>
-
-                    <button type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Confirm identity</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Mid Separator -->
-    <div class="container-fluid" style="background-color: #dc3545 ">
-        <hr>
-    </div>
 
     <!-- Info -->
-    <div class="container-fluid banner2" style="background-color: #ffebed">
-        <div class="row">
 
-            <iframe class="infovid" width="560" height="315" src="https://www.youtube.com/embed/XDdIenqWknI" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <div class="infoText">
-                <h1>What is Airbnb?</h1>
-                <p>Airbnb is an online marketplace where you can rent other people's properties or<br>put your own
-                    property up for rent. Easy and simple to use, our website is trusted<br> by millions all around the
-                    world. Start by registering now! </p>
-            </div>
+ <div class="container-fluid formContCC" style="max-width:500px">
+            <form method="get" action="edited">
+                <div class="form-group formContC mb-0 card p-1 ">
+                    <div class="form-header">
+                        <h4 class="form-title" id="formLabel">Cozy 2 Bedroom House</h5>
+                    </div>
 
-            <img class="infoimg" src="https://media.cntraveler.com/photos/5db1d0dd11c1e500092e7133/16:9/w_1200%2Cc_limit/airbnb-ski-aspen-28328347.jpg"
-                alt="airbnb" width="560" height="315">
+                    <img src="https://gritdaily.com/wp-content/uploads/2019/11/Lyric-New-Orleans-3-Bed-3-Bath-Apartment.jpg"
+                    width="430" height="255">
+
+                    <h8 class="form-title" id="formLabel">This 2 bedroom house offers a cozy, modern setting. Has 2 bathrooms, basement, and backyard.</h5>
+                    <h4 class="form-title" id="formLabel">$100 CAD/Night</h5>
+
+
+
+                    <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-Out"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Name">
+                    </div>
+                                        <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-Out"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Description">
+                    </div>
+                                        <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-Out"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Price">
+                    </div>
+                                        <div class="form-group mb-0 ">
+                        <label for="formGroupCheck-Out"></label>
+                        <input type="text" class="form-control" id="formGroupCheck-Out" placeholder="Location">
+                    </div>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile01"
+      aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+  </div>
+</div>
+                    
+
+                    <button type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Confirm Edits</button>
+                    <button type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Delete Room</button>
+            </form>
         </div>
     </div>
 
@@ -182,6 +170,19 @@
 
         <!-- Check for null -->
 
+<script>
+    $(document).ready(function () {
+$(function() {
+    $('#daterange').daterangepicker();
+
+    $('#daterange').on('apply.daterangepicker', function(ev, picker) {
+        $('#numberdays').val(picker.endDate.diff(picker.startDate, "days"));
+        $('#price').val("$" + picker.endDate.diff(picker.startDate, "days") * 100 + " CAD");
+    });
+});
+    });
+</script>
+
         <script>
 
             function validateLoginForm() {
@@ -229,10 +230,15 @@
 
 
         <!-- End -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
         <script src="../public/js/custom.js"></script>
+       
+        
 </body>
 
 </html>

@@ -53,5 +53,37 @@ app.get("/dashboard", function (req, res) {
     res.render('dashboard', {layout: false})
 });
 
+app.get("/description", function (req, res) {
+    res.render('description', {layout: false})
+});
+
+app.get("/bookdash", function (req, res) {
+    res.render('bookdash', {layout: false})
+});
+
+app.get("/logindash", function (req, res) {
+    res.render('logindash', {layout: false})
+});
+
+app.get("/edit", function (req, res) {
+    res.render('edit', {layout: false})
+});
+
+app.get("/create", function (req, res) {
+    res.render('create', {layout: false})
+});
+
+app.get("/edited", function (req, res) {
+    res.render('edited', {layout: false})
+});
+
+app.get("/created", function (req, res) {
+    res.render('created', {layout: false})
+});
+
+app.get("/deleted", function (req, res) {
+    res.render('deleted', {layout: false})
+});
+
 // setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, onHttpStart);

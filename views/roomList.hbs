@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="#">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
     <title>WEB322</title>
 </head>
 
@@ -52,19 +54,34 @@
 
 
     <div class="container-fluid listings">
+
+         
+         <button onclick="location.href = 'create';"type="submit" class="createbut btn btn-lg btn-primary mb-2 bookButton btn-blue">Create Room</button>
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Search by location
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Toronto</a>
+    <a class="dropdown-item" href="#">Hamilton</a>
+    <a class="dropdown-item" href="#">Scarborough</a>
+  </div>
+</div>
         <div class="row lists">
             <div class="col listimg">
-                <img src="https://gritdaily.com/wp-content/uploads/2019/11/Lyric-New-Orleans-3-Bed-3-Bath-Apartment.jpg"
-                    width="430" height="255">
-                <h4>ENTIRE HOUSE</h4>
+                <a href="/description"><img src="https://gritdaily.com/wp-content/uploads/2019/11/Lyric-New-Orleans-3-Bed-3-Bath-Apartment.jpg"
+                    width="430" height="255"></a>
+                <h4>ENTIRE HOUSE (click image to book)</h4>
                 <h5>Cozy 2 Bedroom House</h5>
                 <p>$100 CAD/night</p>
+                 <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
             <div class="col">
                 <img src="https://www.fodors.com/wp-content/uploads/2019/08/airbnb-hero-.jpg" width="430" height="255">
                 <h4>ENTIRE HOUSE</h4>
                 <h5>Deluxe 4 Bedroom House</h5>
                 <p>$100 CAD/night</p>
+                <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
 
             <div class="col">
@@ -73,6 +90,7 @@
                 <h4>ENTIRE HOUSE</h4>
                 <h5>2 Bedroom House By Resort</h5>
                 <p>$180 CAD/night</p>
+                <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
 
             <div class="w-100"></div>
@@ -82,6 +100,7 @@
                 <h4>ENTIRE HOUSE</h4>
                 <h5>Luxurious 3 Bedroom Getaway</h5>
                 <p>$250 CAD/night</p>
+                <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
 
             <div class="col">
@@ -91,6 +110,7 @@
                 <h4>ENTIRE APARTMENT</h4>
                 <h5>Sleek 1 Bedroom Stay</h5>
                 <p>$80 CAD/night</p>
+                <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
 
             <div class="col">
@@ -99,6 +119,7 @@
                 <h4>ENTIRE APARTMENT</h4>
                 <h5>2 Bedroom Apartment</h5>
                 <p>$75 CAD/night</p>
+                <button onclick="location.href = 'edit';"type="submit" class="btn btn-primary mb-2 bookButton btn-danger">Edit Listing</button>
             </div>
 
         </div>
@@ -233,6 +254,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    
     
 </body>
 
